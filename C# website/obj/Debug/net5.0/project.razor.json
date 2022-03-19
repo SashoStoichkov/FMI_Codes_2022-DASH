@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Krash\\Coding\\C# website\\C# website.csproj",
+  "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\C# website.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,38 +15619,43 @@
   "RootNamespace": "C__website",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\Krash\\Coding\\C# website\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Krash\\Coding\\C# website\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Krash\\Coding\\C# website\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Krash\\Coding\\C# website\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Krash\\Coding\\C# website\\Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Krash\\Coding\\C# website\\Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Krash\\Coding\\C# website\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\Views\\Home\\Demo.cshtml",
+      "TargetPath": "Views\\Home\\Demo.cshtml",
       "FileKind": "mvc"
     }
   ],
