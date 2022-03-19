@@ -9,6 +9,8 @@ using C__website.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using ProcessingImage;
+using System.Text;
+using Models;
 
 namespace C__website.Controllers
 {
@@ -21,9 +23,12 @@ namespace C__website.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index()fileContent, width, height
         {
-            return View();
+            int width = 150, height = 150;
+            string fileContent = System.IO.File.ReadAllText("output.txt");
+            return View("Views/Home/Index.cshtml", new ViewModel(){FileContent = fileContent, rows = width, cols = height});
+
         }
 
         [HttpPost]

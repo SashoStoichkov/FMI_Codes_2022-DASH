@@ -1,26 +1,63 @@
-﻿Please add photo
-<form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="NewPost">
-    <div class="form-group">
-        <div class="col-md-10">
-            <p>Upload one or more files using this form:</p>
-            <input type="file" name="files" multiple />
+﻿@model ViewModel
+@using System.Linq;
+@using Models
+
+<html>
+  <head>
+    <title>Rubik's Cube</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/cube.css" />
+    <script src="js/cube.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  </head>
+<body>
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="NewPost">
+        <div class="form-group">
+            <div class="col-md-10">
+                <p>Upload one or more files using this form:</p>
+                <input type="file" name="files" multiple />
+            </div>
         </div>
+        
+        <label>How many cubes?</label>
+        <input type="text">
+        <select class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <option href="#">16:9</option>
+                <option href="#">9:16</option>
+                <option href="#">1:1</option>
+                <option href="#">default</option>
+            </div>
+        </select>
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value="Upload" />
+            </div>
+        </div>
+        
+        <div id="download" hidden>
+        <label>Name of file: </label>
+        <input type="text" name="name" id="filename">
+        <button type="submit" onclick="downloadImage()">Download Image</button>
+        </div>
+    </form>
+    <div class="grid" id="grid" style=("grid-template-columns: repeat(" + rows + ", 0fr);")>
+        @{
+            string[] cubesInARow = Model.Trim().Split('\n');
+            for(int i = 0; i < cubesInARow.Length; i++){
+                Console.WriteLine(cubesInARow[i]);
+                int[] cubes = cubesInARow[i].Trim().Split(' ').Select(s => Convert.ToInt32(s)).ToArray();
+                for(int j = 0; j < cubes.Length; j++){
+                    <div class="cube" id=("cube-" + i)>
+                        @for(int k = 0; k < 9; k++){
+                            <div class="square" id=("square-" + j + "-" + k)></div>
+                        }
+                    </div>
+                }
+            }
+        }
     </div>
-    
-    <label>How many cubes?</label>
-    <input type="text">
-    <select class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-            <option href="#">16:9</option>
-            <option href="#">9:16</option>
-            <option href="#">1:1</option>
-            <option href="#">default</option>
-        </div>
-    </select>
-    <div class="form-group">
-        <div class="col-md-10">
-            <input type="submit" value="Upload" />
-        </div>
-    </div>
-</form>
+  </body>
+</html>

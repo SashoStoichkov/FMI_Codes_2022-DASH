@@ -144,3 +144,8 @@ C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\obj\Debug\net5.0\ref\C# web
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\obj\Debug\net5.0\C# website.pdb
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\obj\Debug\net5.0\C# website.genruntimeconfig.cache
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\obj\Debug\net5.0\Razor\Views\Home\Demo.cshtml.g.cs
+C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage\bin\Debug\net5.0\ProcessingImage.deps.json
+C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage\bin\Debug\net5.0\ProcessingImage.runtimeconfig.dev.json
+C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage\bin\Debug\net5.0\ProcessingImage.runtimeconfig.json
+C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage\obj\ProcessingImage.csproj.nuget.dgspec.json
+C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage\obj\project.assets.json
