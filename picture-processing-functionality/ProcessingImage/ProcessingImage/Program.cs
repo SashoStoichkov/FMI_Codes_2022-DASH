@@ -68,11 +68,24 @@ namespace ProcessingImage
 
         public static void ProcessImage(int width, int height)
         {
-            ImageScaling.Scale(width, height);
-            Bitmap bitmap = new Bitmap(ImageScaling.resizedOutput);
-            var cleared = ClearImage(bitmap);
-            bitmap = Pixilise(bitmap);
-            bitmap.Save(ImageScaling.pixilised);
+            Bitmap bitmap = null;
+            Bitmap cleared = null;
+            try
+            {
+
+                ImageScaling imageScaling = new ImageScaling();
+                imageScaling.Scale(width, height);
+                bitmap = new Bitmap(ImageScaling.resizedOutput);
+                cleared = ClearImage(bitmap);
+                bitmap = Pixilise(bitmap);
+                bitmap.Save(ImageScaling.pixilised);
+            }
+            finally
+            {
+                bitmap.Dispose();
+                cleared.Dispose();
+            }
+
         }
 
         static Bitmap Pixilise(Bitmap bitmap)

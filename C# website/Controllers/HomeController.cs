@@ -9,8 +9,7 @@ using C__website.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using ProcessingImage;
-using System.Text;
-using Models;
+using System.Drawing;
 
 namespace C__website.Controllers
 {
@@ -23,12 +22,24 @@ namespace C__website.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()fileContent, width, height
+        public IActionResult Index()
         {
-            int width = 150, height = 150;
-            string fileContent = System.IO.File.ReadAllText("output.txt");
-            return View("Views/Home/Index.cshtml", new ViewModel(){FileContent = fileContent, rows = width, cols = height});
+            return View();
+        }
 
+        [ActionName("Photo")]
+        public IActionResult Photo()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ActionName("GetCube")]
+        public IActionResult GetCube(string cubeX, string cubeY)
+        {
+            Bitmap bitmap = new Bitmap(ImageScaling.pixilised);
+            var color = bitmap.GetPixel(int.Parse(cubeX), int.Parse(cubeY));
+            return View();
         }
 
         [HttpPost]
@@ -37,6 +48,10 @@ namespace C__website.Controllers
         {
             using (var stream = new MemoryStream())
             {
+                System.IO.File.Delete(ImageScaling.filePath);
+                System.IO.File.Delete(ImageScaling.resizedOutput);
+                System.IO.File.Delete(ImageScaling.pixilised);
+
                 await files[0].CopyToAsync(stream);
 
                 stream.Seek(0, SeekOrigin.Begin);
@@ -45,12 +60,11 @@ namespace C__website.Controllers
                 //this.usersPostsService.AddPostToUser(this.User.FindFirstValue(ClaimTypes.NameIdentifier)
                 //    , stream.ToArray(), description);
 
-                ProcessingImage.Program.ProcessImage(150,150);
-
+                ProcessingImage.Program.ProcessImage(90,90);
             }
 
 
-            return this.Redirect("/");
+            return this.Redirect("Photo");
 
         }
 
