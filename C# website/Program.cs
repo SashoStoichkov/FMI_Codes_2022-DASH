@@ -15,10 +15,6 @@ namespace C__website
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
-            
-            int width = 150, height = 150;
-            ImageScaling.Scale(width, height);
-            // ImageScaling.ScaleWithAR(width, height);
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

@@ -9,4 +9,8 @@
     <PackageReference Include="LazZiya.ImageResize" Version="4.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\picture-processing-functionality\ProcessingImage\ProcessingImage\ProcessingImage.csproj" />
+  </ItemGroup>
+
 </Project>

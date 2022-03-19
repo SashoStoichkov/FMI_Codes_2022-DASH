@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "RHYJpL8YPkQxtNI7pN/gXHjry66B0mh4c4wdIA4UXBVBig2ARtb+200knDUoSjHq15I3leHF40bxMrE98k3ikA==",
+  "dgSpecHash": "DvIvpiMd1V9/P5DFPN45r1TzZDfvvWkaPPKB35+7saF0r2c+n8TE9kZAELv4NJ58XPAqMov/v7DyvpvSxF2nFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Krash\\Coding\\C# website\\C# website.csproj",
+  "projectFilePath": "D:\\Hakaton\\afterLiveWork\\FMI_Codes_2022-DASH\\C# website\\C# website.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Krash\\.nuget\\packages\\lazziya.imageresize\\4.1.0\\lazziya.imageresize.4.1.0.nupkg.sha512",
-    "C:\\Users\\Krash\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
-    "C:\\Users\\Krash\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
-    "C:\\Users\\Krash\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512"
+    "C:\\Users\\user 1\\.nuget\\packages\\lazziya.imageresize\\4.1.0\\lazziya.imageresize.4.1.0.nupkg.sha512",
+    "C:\\Users\\user 1\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\user 1\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

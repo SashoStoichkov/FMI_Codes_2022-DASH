@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "LazZiya.ImageResize/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/LazZiya.ImageResize.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/LazZiya.ImageResize.dll": {}
+        }
+      },
       "Microsoft.Win32.SystemEvents/6.0.0": {
         "type": "package",
         "compile": {
@@ -48,6 +60,22 @@
     }
   },
   "libraries": {
+    "LazZiya.ImageResize/4.1.0": {
+      "sha512": "bTAJ7Coa2I2PAKw7rcIyjVZlpJnoJacTpkAYAFDSQTrWC4r6m19zoVfMYbn/CXsJc9mfVqznuf0Ql0uwvproKg==",
+      "type": "package",
+      "path": "lazziya.imageresize/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.ico",
+        "icon.png",
+        "lazziya.imageresize.4.1.0.nupkg.sha512",
+        "lazziya.imageresize.nuspec",
+        "lib/netstandard2.0/LazZiya.ImageResize.dll",
+        "lib/netstandard2.0/LazZiya.ImageResize.xml",
+        "license.txt"
+      ]
+    },
     "Microsoft.Win32.SystemEvents/6.0.0": {
       "sha512": "hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "type": "package",
@@ -119,6 +147,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "LazZiya.ImageResize >= 4.1.0",
       "System.Drawing.Common >= 6.0.0"
     ]
   },
@@ -130,11 +159,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Hakaton\\FMI_Codes_2022-DASH\\picture-processing-functionality\\ProcessingImage\\ProcessingImage\\ProcessingImage.csproj",
+      "projectUniqueName": "D:\\Hakaton\\afterLiveWork\\FMI_Codes_2022-DASH\\picture-processing-functionality\\ProcessingImage\\ProcessingImage\\ProcessingImage.csproj",
       "projectName": "ProcessingImage",
-      "projectPath": "D:\\Hakaton\\FMI_Codes_2022-DASH\\picture-processing-functionality\\ProcessingImage\\ProcessingImage\\ProcessingImage.csproj",
+      "projectPath": "D:\\Hakaton\\afterLiveWork\\FMI_Codes_2022-DASH\\picture-processing-functionality\\ProcessingImage\\ProcessingImage\\ProcessingImage.csproj",
       "packagesPath": "C:\\Users\\user 1\\.nuget\\packages\\",
-      "outputPath": "D:\\Hakaton\\FMI_Codes_2022-DASH\\picture-processing-functionality\\ProcessingImage\\ProcessingImage\\obj\\",
+      "outputPath": "D:\\Hakaton\\afterLiveWork\\FMI_Codes_2022-DASH\\picture-processing-functionality\\ProcessingImage\\ProcessingImage\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -168,6 +197,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "LazZiya.ImageResize": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          },
           "System.Drawing.Common": {
             "target": "Package",
             "version": "[6.0.0, )"

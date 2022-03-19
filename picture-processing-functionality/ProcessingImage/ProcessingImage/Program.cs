@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 
-namespace ConsoleApp10
+namespace ProcessingImage
 {
 
-    class Program
+    public class Program
     {
         static List<int[]> rubikColors = new List<int[]>()
         {
@@ -66,12 +66,48 @@ namespace ConsoleApp10
             }
         }
 
+        public static void ProcessImage(int width, int height)
+        {
+            ImageScaling.Scale(width, height);
+            Bitmap bitmap = new Bitmap(ImageScaling.resizedOutput);
+            var cleared = ClearImage(bitmap);
+            bitmap = Pixilise(bitmap);
+            bitmap.Save(ImageScaling.pixilised);
+        }
+
+        static Bitmap Pixilise(Bitmap bitmap)
+        {
+            for (int i = 0; i < bitmap.Width; i++)
+            {
+                for (int j = 0; j < bitmap.Height; j++)
+                {
+                    double minDistance = int.MaxValue;
+
+                    Color colorCurrent = bitmap.GetPixel(i, j);
+
+                    foreach (var point in rubikColors)
+                    {
+                        double currentDistance = getDistanceBetweenTwoPoints(colorCurrent.R, colorCurrent.G, colorCurrent.B, point[0], point[1], point[2]);
+                        if (currentDistance < minDistance)
+                        {
+                            minDistance = currentDistance;
+                            Color newColor = Color.FromArgb(point[0], point[1], point[2]);
+                            bitmap.SetPixel(i, j, newColor);
+                        }
+                    }
+                }
+            }
+
+            return bitmap;
+            //bitmap.Save(@"C:\Users\user 1\Desktop\brad_resized_by_hristo_cleared_rubbified2.jpg");
+        }
+
         static void Main(string[] args)
         {
 
-            Bitmap bitmap = new Bitmap(@"C:\Users\user 1\Desktop\brad.jpg");
+            Bitmap bitmap = new Bitmap(@"C:\Users\user 1\Desktop\brad_resized_by_hristo_cleared.jpg");
             //Bitmap newBitmap = ClearImage(bitmap);
-            //newBitmap.Save(@"C:\Users\user 1\Desktop\brad_cleared.jpg");
+            //newBitmap.Save(@"C:\Users\user 1\Desktop\brad_resized_by_hristo_cleared.jpg");
 
             //return;
             //SaveToFile(bitmap);
@@ -100,7 +136,7 @@ namespace ConsoleApp10
                     }
                 }
             }
-            bitmap.Save(@"C:\Users\user 1\Desktop\brad_rubbified.jpg");
+            bitmap.Save(@"C:\Users\user 1\Desktop\brad_resized_by_hristo_cleared_rubbified2.jpg");
         }
 
         static bool isIn(int x, int y, int width, int height)

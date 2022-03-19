@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using C__website.Models;
 using System.IO;
 using Microsoft.AspNetCore.Http;
+using ProcessingImage;
 
 namespace C__website.Controllers
 {
@@ -35,8 +36,12 @@ namespace C__website.Controllers
 
                 stream.Seek(0, SeekOrigin.Begin);
 
+                System.IO.File.WriteAllBytes(ImageScaling.filePath ,stream.ToArray());
                 //this.usersPostsService.AddPostToUser(this.User.FindFirstValue(ClaimTypes.NameIdentifier)
                 //    , stream.ToArray(), description);
+
+                ProcessingImage.Program.ProcessImage(150,150);
+
             }
 
 
