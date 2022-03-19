@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using C__website.Models;
+using System.IO;
+using Microsoft.AspNetCore.Http;
 
 namespace C__website.Controllers
 {
@@ -21,6 +23,25 @@ namespace C__website.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        [ActionName("NewPost")]
+        public async Task<IActionResult> NewPostProcessingData(List<IFormFile> files, string description)
+        {
+            using (var stream = new MemoryStream())
+            {
+                await files[0].CopyToAsync(stream);
+
+                stream.Seek(0, SeekOrigin.Begin);
+
+                //this.usersPostsService.AddPostToUser(this.User.FindFirstValue(ClaimTypes.NameIdentifier)
+                //    , stream.ToArray(), description);
+            }
+
+
+            return this.Redirect("/");
+
         }
 
         public IActionResult Privacy()

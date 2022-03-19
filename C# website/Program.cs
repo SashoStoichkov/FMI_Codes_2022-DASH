@@ -16,10 +16,9 @@ namespace C__website
         {
             CreateHostBuilder(args).Build().Run();
             
-            string imagePath = "Images/input.jpg", output = "Images/resized.jpg";
             int width = 150, height = 150;
-            ImageScaling.Scale(Image.FromFile(imagePath), width, height, output);
-            // ImageScaling.ScaleWithAR(Image.FromFile(imagePath), width, height, output);
+            ImageScaling.Scale(width, height);
+            // ImageScaling.ScaleWithAR(width, height);
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
