@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProcessingImage", "ProcessingImage\ProcessingImage.csproj", "{5E448F80-106E-4980-B6BB-EC7E1A292C0A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C# website", "..\..\C# website\C# website.csproj", "{DFEDBB67-0B45-43CE-AFA3-45368B51F505}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E448F80-106E-4980-B6BB-EC7E1A292C0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E448F80-106E-4980-B6BB-EC7E1A292C0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E448F80-106E-4980-B6BB-EC7E1A292C0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E448F80-106E-4980-B6BB-EC7E1A292C0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFEDBB67-0B45-43CE-AFA3-45368B51F505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFEDBB67-0B45-43CE-AFA3-45368B51F505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFEDBB67-0B45-43CE-AFA3-45368B51F505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFEDBB67-0B45-43CE-AFA3-45368B51F505}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BF6D685-E3BE-46FF-9477-D274F43FBDBC}
+	EndGlobalSection
+EndGlobal

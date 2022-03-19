@@ -1,0 +1,64 @@
+@model dynamic
+    
+@{
+    ViewData["Title"] = "Home Page";
+}
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Users</h1>
+    </div>
+    @{
+        if(@Model.LoggedUser.Administrator){
+            <input type="button" class="btn btn-outline-success" value="Create" onclick="location.href='@Url.Action("CreateMenu", "Users")'" />
+        }
+    }
+    <table class="table">
+        <thead class="thead-dark">
+            <tr align="center">
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        @if (Model != null){
+            int rows = 1;
+            foreach(var user in Model.Users){
+
+                string color = "";
+            
+                if(@user.Administrator){
+                    color = "table-success";
+                }
+
+                if(@Model.LoggedUser.Administrator){
+                    <tbody align="center">
+                        <tr class=@color>
+                            <th scope="row">@rows</th>
+                            <td>@user.Name</td>
+                            <td>@user.SurName</td>
+                            <td>@user.Username</td>
+                            <td>@Html.ActionLink("Edit", "EditMenu", new { controller = "Users", action = "EditMenu", user_id=user.Id }) | @Html.ActionLink("Details", "ShowDetails", new { controller = "Users", action = "ShowDetails", user_id=user.Id}) | @Html.ActionLink("Delete", "DeleteUser", new { controller = "Users", action = "DeleteUser", user_id=user.Id})</td>
+                        </tr>
+                    </tbody>
+                }
+                else{
+                    <tbody align="center">
+                        <tr class=@color>
+                            <th scope="row">@rows</th>
+                            <td>@user.Name</td>
+                            <td>@user.SurName</td>
+                            <td>@user.Username</td>
+                            <td>@Html.ActionLink("Details", "ShowDetails", new { controller = "Users", action = "ShowDetails", user_id=user.Id})</td>
+                        </tr>
+                    </tbody>
+                }
+
+                rows++;
+
+            }
+        }
+    </table>
+    
+</body>

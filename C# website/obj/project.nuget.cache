@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "2AYS5CyIo+kXDJwSkwLlecRssTNOb7JrQCl8O3LyhYD4COqPYJEo1QEDU0znQXTZAGhauJ29ilCYGT6IvAxvJw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\C# website.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Krash\\.nuget\\packages\\lazziya.imageresize\\4.1.0\\lazziya.imageresize.4.1.0.nupkg.sha512",
+    "C:\\Users\\Krash\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Krash\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
