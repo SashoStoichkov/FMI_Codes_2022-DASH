@@ -1,0 +1,41 @@
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\appsettings.json
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\C# website.exe
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\C# website.deps.json
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\C# website.runtimeconfig.json
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\C# website.runtimeconfig.dev.json
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\C# website.dll
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\ref\C# website.dll
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\C# website.pdb
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\C# website.Views.dll
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\C# website.Views.pdb
+C:\Users\Krash\Coding\C# website\bin\Debug\net5.0\LazZiya.ImageResize.dll
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.csproj.AssemblyReference.cache
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.AssemblyInfoInputs.cache
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.AssemblyInfo.cs
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.csproj.CoreCompileInputs.cache
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.RazorAssemblyInfo.cache
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.RazorAssemblyInfo.cs
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\staticwebassets\C# website.StaticWebAssets.Manifest.cache
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\staticwebassets\C# website.StaticWebAssets.xml
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\scopedcss\bundle\C# website.styles.css
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.TagHelpers.input.cache
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.TagHelpers.output.cache
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.RazorCoreGenerate.cache
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.RazorTargetAssemblyInfo.cache
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.RazorTargetAssemblyInfo.cs
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.Views.pdb
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.csproj.CopyComplete
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.dll
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\ref\C# website.dll
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.pdb
+C:\Users\Krash\Coding\C# website\obj\Debug\net5.0\C# website.genruntimeconfig.cache

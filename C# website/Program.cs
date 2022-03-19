@@ -1,0 +1,32 @@
+using System;
+using System.Drawing;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+
+namespace C__website
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateHostBuilder(args).Build().Run();
+            
+            string imagePath = "Images/input.jpg", output = "Images/resized.jpg";
+            int width = 150, height = 150;
+            ImageScaling.Scale(Image.FromFile(imagePath), width, height, output);
+            // ImageScaling.ScaleWithAR(Image.FromFile(imagePath), width, height, output);
+        }
+
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
+    }
+}

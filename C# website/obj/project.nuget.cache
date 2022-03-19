@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "RHYJpL8YPkQxtNI7pN/gXHjry66B0mh4c4wdIA4UXBVBig2ARtb+200knDUoSjHq15I3leHF40bxMrE98k3ikA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Krash\\Coding\\C# website\\C# website.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Krash\\.nuget\\packages\\lazziya.imageresize\\4.1.0\\lazziya.imageresize.4.1.0.nupkg.sha512",
+    "C:\\Users\\Krash\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Krash\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Krash\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
