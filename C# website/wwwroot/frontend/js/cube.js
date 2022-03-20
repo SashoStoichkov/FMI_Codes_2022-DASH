@@ -26,15 +26,16 @@ function randomColors() {
   });
 }
 
-function setSize() {
+function setSize(width, height) {
   // get the size from the input
-  var width = $("#width").val();
-  var height = $("#height").val();
+  // var width = $("#width").val();
+  // var height = $("#height").val();
 
   // set the size of the grid
   $("#grid").css("grid-template-columns", "repeat(" + width * 3 + ", 0fr)");
   $("#grid").css("grid-template-rows", "repeat(" + height * 3 + ", 0fr)");
 
+  console.log("Hello");
   // add the cubes
   addCubes(width * height * 9);
 

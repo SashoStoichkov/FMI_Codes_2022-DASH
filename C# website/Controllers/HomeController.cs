@@ -10,7 +10,6 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using ProcessingImage;
 using System.Drawing;
-using System.Math;
 
 namespace C__website.Controllers
 {
@@ -58,6 +57,91 @@ namespace C__website.Controllers
 
         }
 
+        private static Tuple<int, int> GetBestRectSlow(int lCubes, int rCubes, double ratio)
+        {
+            double closestRatio = -rCubes;
+            Tuple<int, int> ans = Tuple.Create<int, int>(0, 0);
+            
+            for (int w = 1; w <= rCubes; w++)
+            {
+                for (int h = 1; h <= rCubes; h++)
+                {
+                    if (lCubes <= w * h && w * h <= rCubes)
+                    {
+                        double curr = (double)w / (double)h;
+                        if (Math.Abs(curr - ratio) < Math.Abs(closestRatio - ratio))
+                        {
+                            ans = Tuple.Create<int, int>(w, h);
+                            closestRatio = curr;
+                        }
+                    }
+                }
+            }
+
+            return ans;
+        }
+
+        private static Tuple<int, int> GetBestRect(int lCubes, int rCubes, double ratio)
+        {
+            double closestRatio = -rCubes * 2;
+            Tuple<int, int> ans = Tuple.Create<int, int>(-1, -1);
+
+            void update(int w, int h)
+            {
+                double curr = (double)w / (double)h;
+                if(lCubes<=w*h && w*h<=rCubes && (Math.Abs(ratio-curr)<Math.Abs(ratio-closestRatio) || ans.Item1==-1))
+                {
+                    ans = Tuple.Create<int, int>(w, h);
+                    closestRatio = curr;
+                }
+            }
+
+            for (int w = 1; w <= rCubes; w++)
+            {
+                int minH = (lCubes+w-1) / w;
+                int maxH = rCubes / w;
+
+                int mid1 = (int)Math.Floor(w / ratio);
+                int mid2 = mid1 + 1;
+
+                update(w, minH);
+                update(w, maxH);
+                update(w, mid1);
+                update(w, mid2);
+            }
+
+            return ans;
+        }
+
+        private static int RGBToNumber(int[] rgb){
+
+            if(rgb[0] == 255 && rgb[1] == 255 && rgb[2] == 255) return 0;
+            if(rgb[0] == 0 && rgb[1] == 255 && rgb[2] == 0) return 1;
+            if(rgb[0] == 255 && rgb[1] == 165 && rgb[2] == 0) return 2;
+            if(rgb[0] == 255 && rgb[1] == 0 && rgb[2] == 0) return 3;
+            if(rgb[0] == 0 && rgb[1] == 0 && rgb[2] == 255) return 4;
+            if(rgb[0] == 255 && rgb[1] == 255 && rgb[2] == 0) return 5;
+
+            return -1;
+
+        }
+
+        public static void OutputToAlg(){
+
+            Bitmap image = new Bitmap(ImageScaling.pixilised);
+            StreamWriter output = new StreamWriter("output.txt");
+            for(int i = 0; i < image.Height; i += 3)
+                for(int j = 0; j < image.Width; j += 3){
+                    for(int k = 0; k < 3; k++)
+                        for(int l = 0; l < 3; l++)
+                            output.Write(String.Join(' ', RGBToNumber(new int[3]{image.GetPixel(j + l, i + k).R, image.GetPixel(j + l, i + k).G, image.GetPixel(j + l, i + k).B})) + ' ');
+
+                    output.WriteLine();
+                }
+            output.Close();
+
+        }
+
         [HttpPost]
         [ActionName("NewPost")]
         public async Task<IActionResult> NewPostProcessingData(List<IFormFile> files, int number, AspectRatio ar)
@@ -78,38 +162,62 @@ namespace C__website.Controllers
                 //this.usersPostsService.AddPostToUser(this.User.FindFirstValue(ClaimTypes.NameIdentifier)
                 //    , stream.ToArray(), description);
                 
-                Image image = Image.FromFile(ImageScaling.filePath);
+                Image image = null;
+                try{
 
-                if(ar == AspectRatio.Landscape){
+                    image = Image.FromFile(ImageScaling.filePath);
 
-                    height = Math.sqrt(number / 2);
-                    width = height * 2;
+                    if(ar == AspectRatio.Landscape){
+
+                        Tuple<int, int> sides = GetBestRect((int)(number * 0.8), number, 16.0 / 9.0);
+                        width = sides.Item1;
+                        height = sides.Item2;
+
+                    }
+                    else if(ar == AspectRatio.Portrait){
+
+                        Tuple<int, int> sides = GetBestRect((int)(number * 0.8), number, 9.0 / 16.0);
+                        width = sides.Item1;
+                        height = sides.Item2;
+
+
+                    }
+                    else if(ar == AspectRatio.Square){
+
+                        Tuple<int, int> sides = GetBestRect((int)(number * 0.8), number, 1);
+                        width = sides.Item1;
+                        height = sides.Item2;
+
+                    }
+                    else{
+
+                        int gcd = GCD(image.Width, image.Height);
+                        width = image.Width / gcd;
+                        height = image.Height / gcd;
+
+                        Tuple<int, int> sides = GetBestRect((int)(number * 0.8), number, width * 1.0 / height);
+                        width = sides.Item1;
+                        height = sides.Item2;
+
+                    }
 
                 }
-                else if(ar == AspectRatio.Portrait){
+                finally{
 
-                    width = Math.sqrt(number / 2);
-                    height = 2 * width;
-
-                }
-                else if(ar == AspectRatio.Square){
-
-                    width = Math.sqrt(number);
-                    height = width;
+                    image.Dispose();
 
                 }
-                else{
-
-                    int gcd = GCD(image.Width, image.Height);
-                    width = image.Width / gcd;
-                    height = image.Height / gcd;
-
-                }
-
-                ProcessingImage.ImageProcess.ProcessImage(90,90);
+                
+                ProcessingImage.ImageProcess.ProcessImage(width * 3, height * 3);
             }
 
-            return this.Redirect("Photo");
+            Models.Size size = new Models.Size();
+            size.width = width;
+            size.height = height;
+
+            OutputToAlg();
+
+            return View("Photo", size);
 
         }
 

@@ -1,13 +1,18 @@
-public class Orientation{
+namespace C__website.Models{
 
-    public AspectRatio AR { get; set; }
+    public class Orientation{
 
-}
+        public AspectRatio AR { get; set; }
 
-public enum AspectRatio
-{
-    Default,
-    Landscape,
-    Portrait,
-    Square
+    }
+
+    public enum AspectRatio
+    {
+        Default,
+        Landscape,
+        Portrait,
+        Square,
+        Fill
+    }
+
 }

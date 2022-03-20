@@ -10,12 +10,12 @@ namespace ProcessingImage
     {
         static List<int[]> rubikColors = new List<int[]>()
         {
-            new int[3] { 255,255,255 },
-            new int[3]  { 255, 255, 0 },
-            new int[3] { 255, 0, 0 },
-            new int[3]  { 0, 0, 255 },
-            new int[3]    { 255, 165, 0 },
-            new int[3]  { 0, 255, 0 },
+            new int[3] { 255,255,255 }, //White
+            new int[3]  { 255, 255, 0 }, // Yellow
+            new int[3] { 255, 0, 0 }, // Red
+            new int[3]  { 0, 0, 255 }, // Blue
+            new int[3]    { 255, 165, 0 }, // Orange
+            new int[3]  { 0, 255, 0 }, // Green
         };
         static List<int[]> basicColors = new List<int[]>()
         {
