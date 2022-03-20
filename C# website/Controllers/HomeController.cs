@@ -10,6 +10,7 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using ProcessingImage;
 using System.Drawing;
+using System.Math;
 
 namespace C__website.Controllers
 {
@@ -42,10 +43,27 @@ namespace C__website.Controllers
             return View();
         }
 
+        private static int GCD(int a, int b){
+
+            int Remainder;
+
+            while( b != 0 )
+            {
+                Remainder = a % b;
+                a = b;
+                b = Remainder;
+            }
+
+            return a;
+
+        }
+
         [HttpPost]
         [ActionName("NewPost")]
-        public async Task<IActionResult> NewPostProcessingData(List<IFormFile> files, string description)
+        public async Task<IActionResult> NewPostProcessingData(List<IFormFile> files, int number, AspectRatio ar)
         {
+            int width, height;
+            
             using (var stream = new MemoryStream())
             {
                 System.IO.File.Delete(ImageScaling.filePath);
@@ -59,10 +77,37 @@ namespace C__website.Controllers
                 System.IO.File.WriteAllBytes(ImageScaling.filePath ,stream.ToArray());
                 //this.usersPostsService.AddPostToUser(this.User.FindFirstValue(ClaimTypes.NameIdentifier)
                 //    , stream.ToArray(), description);
+                
+                Image image = Image.FromFile(ImageScaling.filePath);
 
-                ProcessingImage.Program.ProcessImage(90,90);
+                if(ar == AspectRatio.Landscape){
+
+                    height = Math.sqrt(number / 2);
+                    width = height * 2;
+
+                }
+                else if(ar == AspectRatio.Portrait){
+
+                    width = Math.sqrt(number / 2);
+                    height = 2 * width;
+
+                }
+                else if(ar == AspectRatio.Square){
+
+                    width = Math.sqrt(number);
+                    height = width;
+
+                }
+                else{
+
+                    int gcd = GCD(image.Width, image.Height);
+                    width = image.Width / gcd;
+                    height = image.Height / gcd;
+
+                }
+
+                ProcessingImage.ImageProcess.ProcessImage(90,90);
             }
-
 
             return this.Redirect("Photo");
 

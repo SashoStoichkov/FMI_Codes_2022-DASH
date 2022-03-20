@@ -1,4 +1,7 @@
-﻿Please add photo
+﻿@using C__website.Models
+@model Orientation
+
+Please add photo
 <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="NewPost">
     <div class="form-group">
         <div class="col-md-10">
@@ -8,16 +11,8 @@
     </div>
     
     <label>How many cubes?</label>
-    <input type="text">
-    <select class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-            <option href="#">16:9</option>
-            <option href="#">9:16</option>
-            <option href="#">1:1</option>
-            <option href="#">default</option>
-        </div>
-    </select>
+    @Html.TextBox("number")
+    @Html.DropDownListFor(model => model.AR, new SelectList(Enum.GetValues(typeof(AspectRatio))), "Chose aspect ratio")
     <div class="form-group">
         <div class="col-md-10">
             <input type="submit" value="Upload" />

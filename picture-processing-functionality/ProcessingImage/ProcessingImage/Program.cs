@@ -6,7 +6,7 @@ using System.IO;
 namespace ProcessingImage
 {
 
-    public class Program
+    public class ImageProcess
     {
         static List<int[]> rubikColors = new List<int[]>()
         {

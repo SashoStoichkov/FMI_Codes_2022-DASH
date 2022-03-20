@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "9Gy1qAjkAOWKtV7+Qo0mIsY/S4Q0G2UFdQL1YvP7ecj1sTTBoLe0YBy52pRIG6rr2jnjdwT2UUncACLnCASecA==",
+  "dgSpecHash": "Pr/2wZwLSlYjjv3dw50tnJbks0+1kka29+slbIofQNakD5P77S6WRDAvnKmCFFcMA1hrEeOiU40HLOznShFn7w==",
   "success": true,
-  "projectFilePath": "D:\\Hakaton\\afterLiveWork\\FMI_Codes_2022-DASH\\picture-processing-functionality\\ProcessingImage\\ProcessingImage\\ProcessingImage.csproj",
+  "projectFilePath": "C:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\picture-processing-functionality\\ProcessingImage\\ProcessingImage\\ProcessingImage.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\user 1\\.nuget\\packages\\lazziya.imageresize\\4.1.0\\lazziya.imageresize.4.1.0.nupkg.sha512",
-    "C:\\Users\\user 1\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "C:\\Users\\user 1\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+    "C:\\Users\\Krash\\.nuget\\packages\\lazziya.imageresize\\4.1.0\\lazziya.imageresize.4.1.0.nupkg.sha512",
+    "C:\\Users\\Krash\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\Krash\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
