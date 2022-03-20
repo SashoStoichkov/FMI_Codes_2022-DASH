@@ -44,13 +44,12 @@
     </form> *@
     <div>
         Instructions:
-        @* @for(int i = Model.height; i >= 0; i--)
-            for(int j = 0; j < Model.width; j++)
-                <p>Cube @(Model.height - i)</p> *@
-        @foreach (string move in @Model.moves)
-        {
-            <p>@move</p>
-        }
+        @for(int i = Model.height - 1; i >= 0; i--)
+            for(int j = 0; j < Model.width; j++){
+                
+                <p>Cube (@(j + 1), @(Model.height - i)): @Model.moves[i * Model.width + j]</p>
+
+            }
     </div>
 </body>
 </html>
