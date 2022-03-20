@@ -6,16 +6,16 @@ using System.IO;
 namespace ProcessingImage
 {
 
-    public class Program
+    public class ImageProcess
     {
         static List<int[]> rubikColors = new List<int[]>()
         {
-            new int[3] { 255,255,255 },
-            new int[3]  { 255, 255, 0 },
-            new int[3] { 255, 0, 0 },
-            new int[3]  { 0, 0, 255 },
-            new int[3]    { 255, 165, 0 },
-            new int[3]  { 0, 255, 0 },
+            new int[3] { 255,255,255 }, //White
+            new int[3]  { 255, 255, 0 }, // Yellow
+            new int[3] { 255, 0, 0 }, // Red
+            new int[3]  { 0, 0, 255 }, // Blue
+            new int[3]    { 255, 165, 0 }, // Orange
+            new int[3]  { 0, 255, 0 }, // Green
         };
         static List<int[]> basicColors = new List<int[]>()
         {
@@ -68,11 +68,24 @@ namespace ProcessingImage
 
         public static void ProcessImage(int width, int height)
         {
-            ImageScaling.Scale(width, height);
-            Bitmap bitmap = new Bitmap(ImageScaling.resizedOutput);
-            var cleared = ClearImage(bitmap);
-            bitmap = Pixilise(bitmap);
-            bitmap.Save(ImageScaling.pixilised);
+            Bitmap bitmap = null;
+            Bitmap cleared = null;
+            try
+            {
+
+                ImageScaling imageScaling = new ImageScaling();
+                imageScaling.Scale(width, height);
+                bitmap = new Bitmap(ImageScaling.resizedOutput);
+                cleared = ClearImage(bitmap);
+                bitmap = Pixilise(bitmap);
+                bitmap.Save(ImageScaling.pixilised);
+            }
+            finally
+            {
+                bitmap.Dispose();
+                cleared.Dispose();
+            }
+
         }
 
         static Bitmap Pixilise(Bitmap bitmap)

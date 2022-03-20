@@ -4,28 +4,30 @@ using LazZiya.ImageResize;
 namespace ProcessingImage
 {
 
-    public static class ImageScaling
+    public class ImageScaling
     {
 
-        public const string filePath = @"..\utilities\input.jpg", resizedOutput = @"..\utilities\resized.jpg", pixilised = @"..\utilities\pixilised.jpg";
+        public const string filePath = @"wwwroot\utilities\input.jpg", resizedOutput = @"wwwroot\utilities\resized.jpg", pixilised = @"wwwroot\utilities\pixilised.jpg";
 
-        private static Image image = Image.FromFile(filePath);
+        private Image image;
 
-        public static void Scale(int width, int height)
+        public void Scale(int width, int height)
         {
-
-            Bitmap newImage = new Bitmap(width, height);
-            using (Graphics g = Graphics.FromImage(newImage))
+            using (image = Image.FromFile(filePath))
             {
+                Bitmap newImage = new Bitmap(width, height);
+                using (Graphics g = Graphics.FromImage(newImage))
+                {
 
-                g.DrawImage(image, 0, 0, width, height);
-                newImage.Save(resizedOutput);
+                    g.DrawImage(image, 0, 0, width, height);
+                    newImage.Save(resizedOutput);
 
+                }
             }
 
-        }
 
-        public static void ScaleWithAR(int width, int height)
+        }
+        public void ScaleWithAR(int width, int height)
         {
 
             Image resized = ImageResize.Scale(image, width, height);

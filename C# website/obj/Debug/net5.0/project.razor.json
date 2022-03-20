@@ -15644,6 +15644,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\Views\\Home\\Photo.cshtml",
+      "TargetPath": "Views\\Home\\Photo.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Krash\\Coding\\FMI_Codes_2022-DASH\\C# website\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"

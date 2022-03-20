@@ -1,0 +1,576 @@
+No moves required
+No moves required
+No moves required
+No moves required
+U B L F' L' F2 D F' D'
+D' F2 R F' R'
+U B D' L F' L' D' F2 D
+R' U' D2 B D' R D
+D2 F2
+U2
+U2
+No moves required
+B L B' L B L' B'
+U2
+U2 F2
+U2
+U' L U'
+U2
+U2 F' L' D2 B R2 B'
+F2 B L
+F2 B L F R2 F2 R2 F
+U2 D2 F R U L' U' F L' F' L' D L D'
+F2 B L
+R' D2 F' U D R2 D' F R' F'
+F R' D' R
+R' D2 F' U D R2 D' F R' F' B R2 B'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+D' R F R' D F D'
+D R F R' D F' D' F' L2 F' L2
+F2 D'
+R' U F B L2 B' U L' U' L2 F L' F'
+No moves required
+D2 F2 L' F2
+D2
+D2 B2 L B2
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+F' L' F
+No moves required
+No moves required
+No moves required
+U2 F2 L F2 L2 U2 L U2
+No moves required
+F' B2 U R' U'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+U' D
+U2 F2
+No moves required
+No moves required
+U2 L D2
+B2 U2 R' U2 R2 B2 R' B2
+U2 F2
+U2
+U2 B2 L' B2
+No moves required
+No moves required
+No moves required
+No moves required
+U2
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+D L D' L D L' D'
+F L F' L F L' F'
+No moves required
+U' B L B' U L U'
+B L B' L B L' B'
+D' F2 L F U2 R U' F' R2 F
+F R' D' R
+No moves required
+No moves required
+No moves required
+U L U' L U L' U' D L D'
+No moves required
+D2 F2 L' F2 L2 D2 L' D2
+U2 B2 L' B2
+No moves required
+No moves required
+No moves required
+No moves required
+D2 F2 L' F2
+D2
+D2
+D2
+D2
+D2
+U2 B2
+F2 B L' D' R' D
+F' L
+F' L
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+F R F' R F R' F'
+U2
+F R F' R F R' F'
+U2 F2 U L' U' L2 U L U'
+R' D2 F' U D R D' U' R' U2 R2 U'
+L D L'
+No moves required
+D2 R B2
+No moves required
+No moves required
+No moves required
+D L D' L D L' D'
+U2 B2
+U2 F2 R' F2
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+D' B' L F' D' F
+No moves required
+No moves required
+No moves required
+F D2 F'
+R B U' F R F' D' R2 D
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+F R F' R F R' F'
+No moves required
+No moves required
+No moves required
+No moves required
+B L B' L B L' B'
+D F D' L' B D B' F D' F' D F D' F'
+No moves required
+No moves required
+No moves required
+No moves required
+B2
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+B' L D L'
+L' D' L
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+R D' R' B D B'
+L' B D U R2 U' D R D' R' D R D'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+F L F' L F L' F'
+No moves required
+No moves required
+No moves required
+U2 F' B' R2 B' U' R U
+F U L D' L'
+L D F' U L U' F L2 F' B' L2 B
+No moves required
+No moves required
+No moves required
+B2 U2 L U2
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+F L' D' L
+F
+L D L'
+No moves required
+F D2 F'
+F
+F
+R B U' D R2 D2 R' D
+F2 B L
+F2 B L
+F2 B L R2 D R' D'
+U R U'
+No moves required
+D2 B2 R' B2
+B R B' R B R' B'
+No moves required
+D2 F2 B2 L B2
+No moves required
+D L D' L D L' D'
+U F' D L' F D F' D F D' F'
+No moves required
+L F L' F L F' L'
+D B' L' B
+No moves required
+No moves required
+U2 B2 F2 R' F2
+D R D' R D R' D'
+D2 F2
+U2 L' D2
+U2 L D2
+U2 D2 F2 U2 R' U2 D2 R' D2 U2 R' U2
+No moves required
+No moves required
+B L B' L B L' B'
+U2
+U2 L B2
+D R' D'
+F' L D R D'
+U2 D2 F2 U L' U' L2 U L U' F L' F' L2 F L F'
+D2
+D2
+U2 F2
+U2 D2 F2 U2 L U2 D2 L D2
+D2 B2
+D2 F2 U L U' L2 U2 L' U2
+U2 D2
+No moves required
+No moves required
+No moves required
+F2 U2 L' U2
+U2 R' B2
+U R U' R U R' U'
+No moves required
+U B D F2 D' L F' L' F L F' L'
+U2 D2 F2 U2 L U2 D2 L D2 U2 L U2
+D2
+No moves required
+No moves required
+No moves required
+No moves required
+U2 B2 R B2
+U2
+U2 B2 R B2
+U2 F2 R' F2
+No moves required
+No moves required
+No moves required
+No moves required
+F' D R D'
+R D' R'
+No moves required
+No moves required
+D R' D'
+F' L
+F' L
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+U2 L' F2 U2 L2 U2
+U R U' R U R' U'
+No moves required
+No moves required
+R F' R'
+U R' F' R
+B R B'
+D2 F2 B2 L B2
+D2 B2 F2 R F2 U2 R2 U2
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+F' L R' B R B'
+F' L
+No moves required
+No moves required
+No moves required
+L D L'
+U F B' R'
+No moves required
+No moves required
+D F L'
+F R' D' R
+No moves required
+U F B' R' L D' L2 D2 L
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+F' L
+B' R D R'
+No moves required
+No moves required
+No moves required
+L F L'
+B R B'
+U2 D R' D' R2 D R D'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+F' L' B' R2 B
+F' L'
+No moves required
+D2
+D2 B2 L B2
+U2 D2
+D2 B2 U L' U' L2 U L U'
+U2
+U2
+D F L'
+F
+F
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+F U B D2 B'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+U' L' B' R B
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+D2
+D2
+D2
+D2
+D2
+B R B' R B R' B'
+D2
+No moves required
+U2 D2 B2 D L' D' L2 D L D' B L' B' L2 B L B'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+D2 F2 R F2 R2 D2 R D2
+F U L D' L'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+L F L'
+D2 B' R B'
+D2
+D2
+No moves required
+No moves required
+No moves required
+No moves required
+F R F' R F R' F'
+U R U' R U R' U'
+No moves required
+D2 F2 R F2 R2 D2 R D2
+D2
+F2 B L U R' U'
+D2 F2 R F2
+No moves required
+No moves required
+No moves required
+No moves required
+D R D' R D R' D'
+B R B' R B R' B'
+D2 F2 B2 R' B2
+U2 L2 B2
+B' R D R' B D2 B'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+U' B F' D F D'
+No moves required
+No moves required
+No moves required
+U2 B2
+U2 F2 B2
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+U D F B' R' L'
+U F B' R'
+F B'
+No moves required
+No moves required
+No moves required
+D2 B2 R' B2
+U2 F2 B2 L' B2
+D L D' L D L' D'
+No moves required
+D2 B' F L2 F'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+U B F' D' R F' R' U' F' U
+D2 F U L' U' B' L' B
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+U2 F2 L F2
+U2
+U2 B2
+D2
+D2
+D2
+U2 F2
+U2
+D2 F2 L' F2 L' U2 L U2
+D2 B2
+U2 F2 R' F2
+No moves required
+F R F' R F R' F'
+F' D R D' U R2 U'
+F R' D' R
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+L2 D2 U2 F U2 R2 F2 R2
+L' U B' D L D'
+L' F' L D L' F D F' D2 B D' B'
+No moves required
+D' B D2 R' F D F' B D' B'
+U2 F R' U L' U' B' L' B
+D2
+D2
+D2
+D2
+D2 B2 L B2
+No moves required
+No moves required
+U2 F2
+U2
+U2
+U R U' R U R' U'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+D R D' R D R' D' R' F R F'
+D2 B2
+F U L D' L' B D' B'
+R D' L2 B L R F R' U' F U R' F2 R D F2 D'
+L D2 L'
+D
+R' U F D' L' D
+L2 U D2 F D R B' R2 B' R
+U' R' B' U' D L U' F2 U R F R' U F U' F' U F U'
+F' L' F
+D L2 D'
+D' F' U2 B U' D B D' R B R'
+R F' U F D' F' B D2 B' F' D F
+No moves required
+No moves required
+R D' R'
+U B' R' F D F'
+F' L
+No moves required
+No moves required
+No moves required
+U2 F2 R' F2 R2 U2 R' U2
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+U2 F2 D R D' U R2 U'
+U B L R D2 R' B D' B' D2 L D' L'
+No moves required
+F U' R D2 R2 D' R
+R D' F'
+U' L2 B L' B'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+B L' B'
+U D R U2 F L' F' B L B2 L B
+L F L D2 L' R' D R L' D2 L
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+B' L' D L
+B'
+F' L
+F' L D R D'
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+No moves required
+F' L R' B R B'
+F' L
+B'
+No moves required
+No moves required
+No moves required
+No moves required
+R F D' U F U' D' F' D

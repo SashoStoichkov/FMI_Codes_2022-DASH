@@ -7,10 +7,15 @@
 
   <ItemGroup>
     <PackageReference Include="LazZiya.ImageResize" Version="4.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\picture-processing-functionality\ProcessingImage\ProcessingImage\ProcessingImage.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Home\" />
   </ItemGroup>
 
 </Project>
