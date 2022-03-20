@@ -5,6 +5,8 @@
 This page is not yet deployed. -->
 <!--This page is currently deployed. [View the live website.]()-->
 
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Scramble.svg/800px-Scramble.svg.png)
+
 ## Feedback and Bugs
 
 If you have feedback or a bug report, please feel free to open a GitHub issue!
