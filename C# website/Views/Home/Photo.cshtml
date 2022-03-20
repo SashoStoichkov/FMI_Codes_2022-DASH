@@ -23,6 +23,7 @@
     @* <div id="randomColors">
         <button type="submit" onclick="randomColors()">Randomize Colors</button>
     </div> *@
+    <br>
     <div id="download">
         <label>Name of file: </label>
         <input type="text" name="name" id="filename">
@@ -42,8 +43,8 @@
             </div>
         </div>
     </form> *@
-    <div>
-        Instructions:
+    <button onclick="showInstructions()">Instructions:</button>
+    <div id="instructions" style="display:none;">
         @for(int i = Model.height - 1; i >= 0; i--)
             for(int j = 0; j < Model.width; j++){
                 
