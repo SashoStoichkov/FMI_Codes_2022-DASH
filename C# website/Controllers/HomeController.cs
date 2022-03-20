@@ -10,12 +10,14 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using ProcessingImage;
 using System.Drawing;
+using System.Threading;
 
 namespace C__website.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private const string path = "wwwroot/algorithm/";
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -129,7 +131,7 @@ namespace C__website.Controllers
         public static void OutputToAlg(){
 
             Bitmap image = new Bitmap(ImageScaling.pixilised);
-            StreamWriter output = new StreamWriter("output.txt");
+            StreamWriter output = new StreamWriter(path + "output.txt");
             for(int i = 0; i < image.Height; i += 3)
                 for(int j = 0; j < image.Width; j += 3){
                     for(int k = 0; k < 3; k++)
@@ -145,7 +147,12 @@ namespace C__website.Controllers
 
         private static string[] GetMoves(){
 
-            return System.IO.File.ReadAllLines("wwwroot/algorithm/solution.txt");
+            ProcessStartInfo processInfo = new ProcessStartInfo();
+            processInfo.FileName = path + "sideSolver.exe";
+            processInfo.WorkingDirectory = Path.GetDirectoryName(path + "sideSolver.exe");
+            Process solver = Process.Start(processInfo);
+            solver.WaitForExit();
+            return System.IO.File.ReadAllLines(path + "solution.txt");
 
         }
 
