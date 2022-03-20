@@ -2,42 +2,10 @@
     ViewData["Title"] = "Photo";
 }
 @using C__website.Models
-@model Size
+@model Arguments
 
 <html>
 <head>
-    @* <style>
-        body {
-        background-color: beige;
-        }
-
-        .grid {
-        display: grid;
-        gap: 1px;
-        /* gap: 10px; */
-        grid-template-columns: repeat(@Model.width * 3, 0fr);
-        grid-template-rows: repeat(@Model.height * 3, 0fr);
-        width: @Model.width * 33 - 1px;
-        height: @Model.height * 33 - 1px;
-        margin: 0 auto;
-        position: relative;
-        }
-
-        /* .cube {
-        display: grid;
-        gap: 1px;
-        grid-template-columns: repeat(3, 0fr);
-        grid-template-rows: repeat(3, 0fr);
-        white border
-        border: 1px solid #fff;
-        } */
-
-        .square {
-        width: 10px;
-        height: 10px;
-        background-color: white;
-        }
-    </style> *@
     <title>Rubik's Cube</title>
     <link rel="stylesheet" type="text/css" href="~/frontend/css/cube.css" />
     <script src="~/frontend/js/cube.js"></script>
@@ -51,9 +19,6 @@
 </head>
 <body>
     <div class="grid" id="grid">
-        @* @for(int i = 0; i < Model.width * Model.height * 9; i++){
-            <div class="square" id="square_' + i + '"></div>
-        } *@
     </div>
     @* <div id="randomColors">
         <button type="submit" onclick="randomColors()">Randomize Colors</button>
@@ -64,7 +29,7 @@
         <button type="submit" onclick="downloadImage()">Download Image</button>
     </div>
 
-    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="GetCube">
+    @* <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="GetCube">
         
 
         <label>Enter cube number</label>
@@ -76,7 +41,17 @@
                 <input type="submit"  value="Upload" />
             </div>
         </div>
-    </form>
+    </form> *@
+    <div>
+        Instructions:
+        @* @for(int i = Model.height; i >= 0; i--)
+            for(int j = 0; j < Model.width; j++)
+                <p>Cube @(Model.height - i)</p> *@
+        @foreach (string move in @Model.moves)
+        {
+            <p>@move</p>
+        }
+    </div>
 </body>
 </html>
 

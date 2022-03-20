@@ -139,6 +139,13 @@ namespace C__website.Controllers
                     output.WriteLine();
                 }
             output.Close();
+            image.Dispose();
+
+        }
+
+        private static string[] GetMoves(){
+
+            return System.IO.File.ReadAllLines("wwwroot/algorithm/solution.txt");
 
         }
 
@@ -211,13 +218,15 @@ namespace C__website.Controllers
                 ProcessingImage.ImageProcess.ProcessImage(width * 3, height * 3);
             }
 
-            Models.Size size = new Models.Size();
-            size.width = width;
-            size.height = height;
+            Models.Arguments args = new Models.Arguments();
+            args.width = width;
+            args.height = height;
 
             OutputToAlg();
 
-            return View("Photo", size);
+            args.moves = GetMoves();
+
+            return View("Photo", args);
 
         }
 

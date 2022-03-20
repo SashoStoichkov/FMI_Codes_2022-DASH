@@ -11,8 +11,7 @@ namespace C__website.Models{
         Default,
         Landscape,
         Portrait,
-        Square,
-        Fill
+        Square
     }
 
 }
