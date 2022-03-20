@@ -3,6 +3,8 @@
 #include <fstream>
 #include <vector>
 #include <time.h>
+#include <chrono>
+#include <random>
 
 using namespace std;
 
@@ -362,25 +364,25 @@ struct Cube
         delete[] a;
     }
 
-    void peformMoves(string s)
+    void performMoves(string s)
     {
         int sz=s.size();
         for(int i=0;i<sz;i++)
         {
             if(s[i]=='F')
             {
-                cout<<"F";
+                //cout<<"F";
                 if(i!=sz-1)
                 {
-                    if(s[i+1]=='P')
+                    if(s[i+1]=='\'')
                     {
-                        cout<<"P";
+                        //cout<<"P";
                         this->FPrime();
                     }
                     else
                     if(s[i+1]=='2')
                     {
-                        cout<<"2";
+                        //cout<<"2";
                         this->F2();
                     }
                     else
@@ -389,22 +391,22 @@ struct Cube
                 else
                     this->F();
 
-                cout<<endl;
+                //cout<<endl;
             }
             if(s[i]=='D')
             {
-                cout<<"D";
+                //cout<<"D";
                 if(i!=sz-1)
                 {
-                    if(s[i+1]=='P')
+                    if(s[i+1]=='\'')
                     {
-                        cout<<"P";
+                        //cout<<"P";
                         this->DPrime();
                     }
                     else
                     if(s[i+1]=='2')
                     {
-                        cout<<"2";
+                        //cout<<"2";
                         this->D2();
                     }
                     else
@@ -413,22 +415,22 @@ struct Cube
                 else
                     this->D();
 
-                cout<<endl;
+                //cout<<endl;
             }
             if(s[i]=='U')
             {
-                cout<<"U";
+                //cout<<"U";
                 if(i!=sz-1)
                 {
-                    if(s[i+1]=='P')
+                    if(s[i+1]=='\'')
                     {
-                        cout<<"P";
+                        //cout<<"P";
                         this->UPrime();
                     }
                     else
                     if(s[i+1]=='2')
                     {
-                        cout<<"2";
+                        //cout<<"2";
                         this->U2();
                     }
                     else
@@ -437,22 +439,22 @@ struct Cube
                 else
                     this->U();
 
-                cout<<endl;
+                //cout<<endl;
             }
             if(s[i]=='B')
             {
-                cout<<"B";
+                //cout<<"B";
                 if(i!=sz-1)
                 {
-                    if(s[i+1]=='P')
+                    if(s[i+1]=='\'')
                     {
-                        cout<<"P";
+                        //cout<<"P";
                         this->BPrime();
                     }
                     else
                     if(s[i+1]=='2')
                     {
-                        cout<<"2";
+                        //cout<<"2";
                         this->B2();
                     }
                     else
@@ -461,22 +463,22 @@ struct Cube
                 else
                     this->B();
 
-                cout<<endl;
+                //cout<<endl;
             }
             if(s[i]=='R')
             {
-                cout<<"R";
+                //cout<<"R";
                 if(i!=sz-1)
                 {
-                    if(s[i+1]=='P')
+                    if(s[i+1]=='\'')
                     {
-                        cout<<"P";
+                        //cout<<"P";
                         this->RPrime();
                     }
                     else
                     if(s[i+1]=='2')
                     {
-                        cout<<"2";
+                        //cout<<"2";
                         this->R2();
                     }
                     else
@@ -485,22 +487,22 @@ struct Cube
                 else
                     this->R();
 
-                cout<<endl;
+                //cout<<endl;
             }
             if(s[i]=='L')
             {
-                cout<<"L";
+                //cout<<"L";
                 if(i!=sz-1)
                 {
-                    if(s[i+1]=='P')
+                    if(s[i+1]=='\'')
                     {
-                        cout<<"P";
+                        //cout<<"P";
                         this->LPrime();
                     }
                     else
                     if(s[i+1]=='2')
                     {
-                        cout<<"2";
+                        //cout<<"2";
                         this->L2();
                     }
                     else
@@ -509,7 +511,7 @@ struct Cube
                 else
                     this->L();
 
-                cout<<endl;
+                //cout<<endl;
             }
 
         }
@@ -1013,9 +1015,48 @@ string grid2MovesString(int8_t **m)
     return test_string(finalMovesInt);
 }
 
+void stressTest()
+{
+    mt19937 rnd((uint32_t)chrono::steady_clock::now().time_since_epoch().count());
+
+    int8_t **m = new int8_t*[3];
+    for(int i = 0;i<3;i++)
+        m[i] = new int8_t[3];
+
+    while(true)
+    {
+        for(int i = 0;i<3;i++)
+            for(int j = 0;j<3;j++)
+                m[i][j] = rnd()%6;
+
+        for(int i = 0;i<3;i++)
+        {
+            for(int j = 0;j<3;j++)
+                cout << (int)m[i][j] << " ";
+            cout << '\n';
+        }
+
+        Cube <3> c;
+        string moves = grid2MovesString(m);
+        cout << moves << '\n';
+
+        c.performMoves(moves);
+        if(c.isDone(m, m[1][1])==false)
+        {
+            cout << "FAK" << '\n';
+            system("PAUSE");
+        }
+
+        //cin.get();
+    }
+}
+
 int main()
 {
     loadDatabase();
+
+    ifstream fin("output.txt");
+    ofstream fout("solution.txt");
 
     int **input = new int*[3];
     for(int i = 0;i<3;i++) input[i] = new int[3];
@@ -1023,53 +1064,24 @@ int main()
     int8_t **m = new int8_t*[3];
     for(int i = 0;i<3;i++) m[i] = new int8_t[3];
 
-    for(int i = 0;i<3;i++)
+    while(fin >> input[0][0])
     {
-        for(int j = 0;j<3;j++)
+        m[0][0] = input[0][0];
+        for(int i = 0;i<3;i++)
         {
-            cin >> input[i][j];
-            m[i][j] = input[i][j];
+            for(int j = 0;j<3;j++)
+            {
+                if(i==0 && j==0) continue;
+
+                fin >> input[i][j];
+                m[i][j] = input[i][j];
+            }
         }
+
+        fout << grid2MovesString(m) << '\n';
     }
 
-    double startTime = clock();
-    cout << grid2MovesString(m) << '\n';
-    cout << (clock()-startTime)/CLOCKS_PER_SEC << '\n';
+    fin.close();
+    fout.close();
 }
-/*
-2 0 1
-3 1 5
-4 4 1
 
-0 3 2
-4 5 5
-1 1 4
-
-0 0 0
-0 0 0
-0 0 0
-
-1 1 1
-2 2 2
-3 3 3
-
-4 1 5
-1 3 0
-2 4 1
-
-1 2 1
-2 4 3
-5 0 1
-
-0 1 2
-3 4 5
-0 1 2
-
-2 2 2
-2 1 2
-2 2 2
-
-2 1 2
-1 5 1
-2 1 2
-*/
