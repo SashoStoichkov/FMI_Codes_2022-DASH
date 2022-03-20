@@ -976,6 +976,7 @@ string grid2MovesString(int8_t **m)
             for(int j = 0;j<3;j++)
                 correct[i][j] = (c.a[side][i][j]==m[i][j]);
 
+        bool found = false;
         for(const vector <Moves> &v: allInsertMoves)
         {
             Cube<3> newC(c);
@@ -1001,8 +1002,14 @@ string grid2MovesString(int8_t **m)
                 c = newC;
                 for(Moves x: v) finalMoves.push_back(x);
 
+                found = true;
                 break;
             }
+        }
+
+        if(found==false)
+        {
+            return "SOLUTION NOT FOUND";
         }
     }
 
