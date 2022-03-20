@@ -1,10 +1,8 @@
-# Project Name
-
-Project Description
-
+# Cube Art
+<!-- 
 ## Live Version
 
-This page is not yet deployed.
+This page is not yet deployed. -->
 <!--This page is currently deployed. [View the live website.]()-->
 
 ## Feedback and Bugs
