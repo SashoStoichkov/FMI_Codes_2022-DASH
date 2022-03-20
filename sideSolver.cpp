@@ -1085,7 +1085,10 @@ int main()
             }
         }
 
-        fout << grid2MovesString(m) << '\n';
+        string moves = grid2MovesString(m);
+        if(moves=="") moves = "No moves required";
+
+        fout << moves << '\n';
     }
 
     fin.close();
