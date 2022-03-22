@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -10,7 +9,6 @@ using System.IO;
 using Microsoft.AspNetCore.Http;
 using ProcessingImage;
 using System.Drawing;
-using System.Threading;
 
 namespace C__website.Controllers
 {
@@ -39,7 +37,7 @@ namespace C__website.Controllers
         [ActionName("GetCube")]
         public IActionResult GetCube(string cubeX, string cubeY)
         {
-            Bitmap bitmap = new Bitmap(ImageScaling.pixilised);
+            Bitmap bitmap = new Bitmap(ImageProcess.pixilised);
             var color = bitmap.GetPixel(int.Parse(cubeX), int.Parse(cubeY));
             return View();
         }
@@ -130,7 +128,7 @@ namespace C__website.Controllers
 
         public static void OutputToAlg(){
 
-            Bitmap image = new Bitmap(ImageScaling.pixilised);
+            Bitmap image = new Bitmap(ImageProcess.pixilised);
             StreamWriter output = new StreamWriter(path + "output.txt");
             for(int i = 0; i < image.Height; i += 3)
                 for(int j = 0; j < image.Width; j += 3){
@@ -164,22 +162,22 @@ namespace C__website.Controllers
             
             using (var stream = new MemoryStream())
             {
-                System.IO.File.Delete(ImageScaling.filePath);
-                System.IO.File.Delete(ImageScaling.resizedOutput);
-                System.IO.File.Delete(ImageScaling.pixilised);
+                System.IO.File.Delete(ImageProcess.filePath);
+                System.IO.File.Delete(ImageProcess.resizedOutput);
+                System.IO.File.Delete(ImageProcess.pixilised);
 
                 await files[0].CopyToAsync(stream);
 
                 stream.Seek(0, SeekOrigin.Begin);
 
-                System.IO.File.WriteAllBytes(ImageScaling.filePath ,stream.ToArray());
+                System.IO.File.WriteAllBytes(ImageProcess.filePath ,stream.ToArray());
                 //this.usersPostsService.AddPostToUser(this.User.FindFirstValue(ClaimTypes.NameIdentifier)
                 //    , stream.ToArray(), description);
                 
                 Image image = null;
                 try{
 
-                    image = Image.FromFile(ImageScaling.filePath);
+                    image = Image.FromFile(ImageProcess.filePath);
 
                     if(ar == AspectRatio.Landscape){
 

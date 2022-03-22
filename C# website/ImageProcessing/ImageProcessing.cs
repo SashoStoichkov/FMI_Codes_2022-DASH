@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
+using System.Drawing;
+using LazZiya.ImageResize;
+using System.Collections.Generic;
 
 namespace ProcessingImage
 {
@@ -49,10 +50,6 @@ namespace ProcessingImage
 
             return Math.Sqrt(dx * dx + dy * dy + dz * dz);
         }
-        static void Main2(string[] args)
-        {
-            Bitmap bitmap = new Bitmap(@"C:\Users\user 1\Desktop\output.jpg");
-        }
 
         static void SaveToFile(Bitmap bitmap)
         {
@@ -73,12 +70,11 @@ namespace ProcessingImage
             try
             {
 
-                ImageScaling imageScaling = new ImageScaling();
-                imageScaling.Scale(width, height);
-                bitmap = new Bitmap(ImageScaling.resizedOutput);
+                Scale(width, height);
+                bitmap = new Bitmap(resizedOutput);
                 cleared = ClearImage(bitmap);
                 bitmap = Pixilise(bitmap);
-                bitmap.Save(ImageScaling.pixilised);
+                bitmap.Save(pixilised);
             }
             finally
             {
@@ -113,43 +109,6 @@ namespace ProcessingImage
 
             return bitmap;
             //bitmap.Save(@"C:\Users\user 1\Desktop\brad_resized_by_hristo_cleared_rubbified2.jpg");
-        }
-
-        static void Main(string[] args)
-        {
-
-            Bitmap bitmap = new Bitmap(@"C:\Users\user 1\Desktop\brad_resized_by_hristo_cleared.jpg");
-            //Bitmap newBitmap = ClearImage(bitmap);
-            //newBitmap.Save(@"C:\Users\user 1\Desktop\brad_resized_by_hristo_cleared.jpg");
-
-            //return;
-            //SaveToFile(bitmap);
-
-            Console.WriteLine(bitmap.Size);
-
-
-
-            for (int i = 0; i < bitmap.Width; i++)
-            {
-                for (int j = 0; j < bitmap.Height; j++)
-                {
-                    double minDistance = int.MaxValue;
-
-                    Color colorCurrent = bitmap.GetPixel(i, j);
-
-                    foreach (var point in rubikColors)
-                    {
-                        double currentDistance = getDistanceBetweenTwoPoints(colorCurrent.R, colorCurrent.G, colorCurrent.B, point[0], point[1], point[2]);
-                        if (currentDistance < minDistance)
-                        {
-                            minDistance = currentDistance;
-                            Color newColor = Color.FromArgb(point[0], point[1], point[2]);
-                            bitmap.SetPixel(i, j, newColor);
-                        }
-                    }
-                }
-            }
-            bitmap.Save(@"C:\Users\user 1\Desktop\brad_resized_by_hristo_cleared_rubbified2.jpg");
         }
 
         static bool isIn(int x, int y, int width, int height)
@@ -216,5 +175,28 @@ namespace ProcessingImage
 
             return newBitmap;
         }
+
+        public const string filePath = @"wwwroot\utilities\input.jpg", resizedOutput = @"wwwroot\utilities\resized.jpg", pixilised = @"wwwroot\utilities\pixilised.jpg";
+
+        private static Image image;
+
+        public static void Scale(int width, int height)
+        {
+            using (image = Image.FromFile(filePath))
+            {
+                Bitmap newImage = new Bitmap(width, height);
+                using (Graphics g = Graphics.FromImage(newImage))
+                {
+
+                    g.DrawImage(image, 0, 0, width, height);
+                    newImage.Save(resizedOutput);
+
+                }
+            }
+
+
+        }
+
     }
+
 }

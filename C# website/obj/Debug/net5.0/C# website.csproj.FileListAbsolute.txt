@@ -130,10 +130,6 @@ D:\Hakaton\afterLiveWork\FMI_Codes_2022-DASH\C# website\obj\Debug\net5.0\C# webs
 D:\Hakaton\afterLiveWork\FMI_Codes_2022-DASH\C# website\obj\Debug\net5.0\C# website.genruntimeconfig.cache
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\appsettings.json
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage.deps.json
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage.runtimeconfig.json
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage.runtimeconfig.dev.json
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage.exe
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\C# website.exe
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\C# website.deps.json
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\C# website.runtimeconfig.json
@@ -160,14 +156,12 @@ C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\Microsoft.
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\System.Composition.AttributedModel.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\System.Composition.Convention.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\System.Composition.Hosting.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\System.Composition.Runtime.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\System.Composition.TypedParts.dll
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\System.Drawing.Common.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -222,11 +216,6 @@ C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\zh-Hans\Mi
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage.dll
-C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\bin\Debug\net5.0\ProcessingImage.pdb
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\obj\Debug\net5.0\C# website.csproj.AssemblyReference.cache
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\obj\Debug\net5.0\C# website.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Krash\Coding\FMI_Codes_2022-DASH\C# website\obj\Debug\net5.0\C# website.AssemblyInfoInputs.cache
