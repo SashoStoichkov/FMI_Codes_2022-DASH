@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\picture-processing-functionality\ProcessingImage\ProcessingImage\ProcessingImage.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\Home\" />
   </ItemGroup>
 
